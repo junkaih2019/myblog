@@ -1,11 +1,11 @@
 ---
-title: "字符串"
+title: "C++字符串基础操作"
 date: 2022-05-03T10:36:01+08:00
 draft: false
-toc: true
+toc: false
 images:
 tags: 
-  - untagged
+  - C++
 ---
 
 # 字符串
