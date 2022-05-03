@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Junkaih&#39;s Blog</title>
+    <link>http://101.42.248.138/tags/</link>
+    <description>Recent content in Tags on Junkaih&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-hans</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Tue, 03 May 2022 10:36:01 +0800</lastBuildDate><atom:link href="http://101.42.248.138/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>http://101.42.248.138/tags/c&#43;&#43;/</link>
+      <pubDate>Tue, 03 May 2022 10:36:01 +0800</pubDate>
+      
+      <guid>http://101.42.248.138/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,73 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Posts on Junkaih&#39;s Blog</title>
+		<link>http://101.42.248.138/posts/</link>
+		<description>Recent content in Posts on Junkaih&#39;s Blog</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>zh-hans</language>
+		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+		<lastBuildDate>Tue, 03 May 2022 10:36:01 +0800</lastBuildDate>
+		<atom:link href="http://101.42.248.138/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>C&#43;&#43;字符串基础操作</title>
+			<link>http://101.42.248.138/posts/string/</link>
+			<pubDate>Tue, 03 May 2022 10:36:01 +0800</pubDate>
+			
+			<guid>http://101.42.248.138/posts/string/</guid>
+			<description>字符串 输入 char s[100]; //读到空格、回车为止 cin &amp;lt;&amp;lt; s; scanf(&amp;#34;%s&amp;#34;, s); //读入空格，回车 fgets(s,10000,stdin); //注意：会把回车读进来 cin.getline(s,1000) 输出 printf(&amp;#34;%s\n&amp;#34;,s); puts(s); 常用函数 # inlude &amp;lt;cstring&amp;gt; strlen(s);//不包含‘\0&amp;#39; strcmp(a,b);//字典序比较，相等为0，a&amp;lt;b返回-1，a&amp;gt;b返回10 strcpy(a,b);//把后面的复制给前面的 String类 #include &amp;lt;string&amp;gt;初始化 string s1; //默认的空字符串 string s2 = s1; //s2是s1的一个副本 string s3 = &amp;#34;hiya&amp;#34;; string s4(10, &amp;#39;c&amp;#39;); //s4内容：cccccccccc 输入 cin &amp;gt;&amp;gt; s1;//读入空格、回车、换行前的字符串 getline(cin, str);//读入整行 /*注意：string不能用scanf()读入*/ 输出 printf(&amp;#34;%s&amp;#34;, s1.c_str()); //c_str():返回string数组首地址 puts(s1.c_str()); cout &amp;lt;&amp;lt; s1; 常用函数 s1.empty(); //当前string是否为空，返回0、1 s1.size(); //当前字符的长度，O(1)速度 s1 &amp;gt; s2; //&amp;gt; &amp;lt; &amp;gt;= &amp;lt;= == !</description>
+			<content type="html"><![CDATA[<h1 id="字符串">字符串</h1>
+<h2 id="输入">输入</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//读到空格、回车为止
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">cin</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//读入空格，回车
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">fgets</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="n">stdin</span><span class="p">);</span> <span class="c1">//注意：会把回车读进来
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">cin</span><span class="p">.</span><span class="n">getline</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="输出">输出</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">printf</span><span class="p">(</span><span class="s">&#34;%s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">puts</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="常用函数">常用函数</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp"># inlude &lt;cstring&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="c1">//不包含‘\0&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">strcmp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span><span class="c1">//字典序比较，相等为0，a&lt;b返回-1，a&gt;b返回10
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">strcpy</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span><span class="c1">//把后面的复制给前面的
+</span></span></span></code></pre></div><h2 id="string类">String类</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span></span></span></code></pre></div><h3 id="初始化">初始化</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">string</span> <span class="n">s1</span><span class="p">;</span> <span class="c1">//默认的空字符串
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">string</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span><span class="p">;</span> <span class="c1">//s2是s1的一个副本
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">string</span> <span class="n">s3</span> <span class="o">=</span> <span class="s">&#34;hiya&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">string</span> <span class="nf">s4</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="sc">&#39;c&#39;</span><span class="p">);</span> <span class="c1">//s4内容：cccccccccc
+</span></span></span></code></pre></div><h3 id="输入-1">输入</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">s1</span><span class="p">;</span><span class="c1">//读入空格、回车、换行前的字符串
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span><span class="c1">//读入整行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cm">/*注意：string不能用scanf()读入*/</span>
+</span></span></code></pre></div><h3 id="输出-1">输出</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">printf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="n">s1</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span> <span class="c1">//c_str():返回string数组首地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">puts</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="常用函数-1">常用函数</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">s1</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span> <span class="c1">//当前string是否为空，返回0、1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">s1</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="c1">//当前字符的长度，O(1)速度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span><span class="p">;</span> <span class="c1">//&gt; &lt; &gt;=  &lt;= == !=
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">s1</span> <span class="o">+</span> <span class="n">s2</span><span class="p">;</span> <span class="c1">//&#34;abc&#34;拼接&#34;def&#34;得&#34;abcdef&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">s1</span> <span class="o">+=</span> <span class="n">s3</span><span class="p">;</span>  <span class="c1">//支持累加
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">s1</span> <span class="o">+=</span> <span class="s">&#34;yes&#34;</span><span class="p">;</span> <span class="n">s1</span> <span class="o">+</span> <span class="sc">&#39;!&#39;</span><span class="p">;</span><span class="c1">//&#39;+&#39;运算符两侧至少有一个string变量
+</span></span></span></code></pre></div><h3 id="遍历">遍历</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">string</span> <span class="n">s1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s1</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">c</span> <span class="p">:</span> <span class="n">s1</span><span class="p">){}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">c</span> <span class="p">:</span> <span class="n">s1</span><span class="p">){}</span><span class="c1">//遍历得同时改变原string
+</span></span></span></code></pre></div><h2 id="trick">Trick</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp"># 遍历字符串
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">101</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">len</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">str</span><span class="p">);</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="n">i</span><span class="o">++</span><span class="p">){}</span>
+</span></span></code></pre></div><p>添加一行信息 再来一次 again</p>
+]]></content>
+		</item>
+		
+	</channel>
+</rss>

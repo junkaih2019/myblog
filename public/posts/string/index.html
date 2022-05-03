@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta itemprop="name" content="C&#43;&#43;字符串基础操作">
+<meta itemprop="description" content="字符串 输入 char s[100]; //读到空格、回车为止 cin &lt;&lt; s; scanf(&#34;%s&#34;, s); //读入空格，回车 fgets(s,10000,stdin); //注意：会把回车读进来 cin.getline(s,1000) 输出 printf(&#34;%s\n&#34;,s); puts(s); 常用函数 # inlude &lt;cstring&gt; strlen(s);//不包含‘\0&#39; strcmp(a,b);//字典序比较，相等为0，a&lt;b返回-1，a&gt;b返回10 strcpy(a,b);//把后面的复制给前面的 String类 #include &lt;string&gt;初始化 string s1; //默认的空字符串 string s2 = s1; //s2是s1的一个副本 string s3 = &#34;hiya&#34;; string s4(10, &#39;c&#39;); //s4内容：cccccccccc 输入 cin &gt;&gt; s1;//读入空格、回车、换行前的字符串 getline(cin, str);//读入整行 /*注意：string不能用scanf()读入*/ 输出 printf(&#34;%s&#34;, s1.c_str()); //c_str():返回string数组首地址 puts(s1.c_str()); cout &lt;&lt; s1; 常用函数 s1.empty(); //当前string是否为空，返回0、1 s1.size(); //当前字符的长度，O(1)速度 s1 &gt; s2; //&gt; &lt; &gt;= &lt;= == !"><meta itemprop="datePublished" content="2022-05-03T10:36:01+08:00" />
+<meta itemprop="dateModified" content="2022-05-03T10:36:01+08:00" />
+<meta itemprop="wordCount" content="133">
+<meta itemprop="keywords" content="C&#43;&#43;," /><meta property="og:title" content="C&#43;&#43;字符串基础操作" />
+<meta property="og:description" content="字符串 输入 char s[100]; //读到空格、回车为止 cin &lt;&lt; s; scanf(&#34;%s&#34;, s); //读入空格，回车 fgets(s,10000,stdin); //注意：会把回车读进来 cin.getline(s,1000) 输出 printf(&#34;%s\n&#34;,s); puts(s); 常用函数 # inlude &lt;cstring&gt; strlen(s);//不包含‘\0&#39; strcmp(a,b);//字典序比较，相等为0，a&lt;b返回-1，a&gt;b返回10 strcpy(a,b);//把后面的复制给前面的 String类 #include &lt;string&gt;初始化 string s1; //默认的空字符串 string s2 = s1; //s2是s1的一个副本 string s3 = &#34;hiya&#34;; string s4(10, &#39;c&#39;); //s4内容：cccccccccc 输入 cin &gt;&gt; s1;//读入空格、回车、换行前的字符串 getline(cin, str);//读入整行 /*注意：string不能用scanf()读入*/ 输出 printf(&#34;%s&#34;, s1.c_str()); //c_str():返回string数组首地址 puts(s1.c_str()); cout &lt;&lt; s1; 常用函数 s1.empty(); //当前string是否为空，返回0、1 s1.size(); //当前字符的长度，O(1)速度 s1 &gt; s2; //&gt; &lt; &gt;= &lt;= == !" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://101.42.248.138/posts/string/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-05-03T10:36:01+08:00" />
+<meta property="article:modified_time" content="2022-05-03T10:36:01+08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C&#43;&#43;字符串基础操作"/>
+<meta name="twitter:description" content="字符串 输入 char s[100]; //读到空格、回车为止 cin &lt;&lt; s; scanf(&#34;%s&#34;, s); //读入空格，回车 fgets(s,10000,stdin); //注意：会把回车读进来 cin.getline(s,1000) 输出 printf(&#34;%s\n&#34;,s); puts(s); 常用函数 # inlude &lt;cstring&gt; strlen(s);//不包含‘\0&#39; strcmp(a,b);//字典序比较，相等为0，a&lt;b返回-1，a&gt;b返回10 strcpy(a,b);//把后面的复制给前面的 String类 #include &lt;string&gt;初始化 string s1; //默认的空字符串 string s2 = s1; //s2是s1的一个副本 string s3 = &#34;hiya&#34;; string s4(10, &#39;c&#39;); //s4内容：cccccccccc 输入 cin &gt;&gt; s1;//读入空格、回车、换行前的字符串 getline(cin, str);//读入整行 /*注意：string不能用scanf()读入*/ 输出 printf(&#34;%s&#34;, s1.c_str()); //c_str():返回string数组首地址 puts(s1.c_str()); cout &lt;&lt; s1; 常用函数 s1.empty(); //当前string是否为空，返回0、1 s1.size(); //当前字符的长度，O(1)速度 s1 &gt; s2; //&gt; &lt; &gt;= &lt;= == !"/>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+	<link rel="shortcut icon" href="/favicon.ico">
+
+	<title>C&#43;&#43;字符串基础操作</title>
+	<link rel="stylesheet" href="http://101.42.248.138/css/style.min.037b6ee8f8c1baab6a3d0a9da11c3ff18a7552471f16c59fd98538d5ce99208b.css" integrity="sha256-A3tu6PjBuqtqPQqdoRw/8Yp1UkcfFsWf2YU41c6ZIIs=" crossorigin="anonymous">
+	
+	<link rel="stylesheet" href="http://101.42.248.138/css/a.css">
+</head>
+
+<body id="page">
+	
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="http://101.42.248.138">Junkaih&#39;s Blog</a>
+				</div>
+				<nav class="site-nav hide-in-mobile">
+					
+				<a href="http://101.42.248.138/posts/">文章</a>
+				<a href="http://101.42.248.138/tags/">标签</a>
+				<a href="http://101.42.248.138/about/">关于</a>
+
+				</nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://github.com/junkaih2019" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="http://101.42.248.138/posts/">文章</a></li>
+			<li><a href="http://101.42.248.138/tags/">标签</a></li>
+			<li><a href="http://101.42.248.138/about/">关于</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster">
+		<article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>May 3, 2022</span></div>
+				<h1>C&#43;&#43;字符串基础操作</h1>
+			</header>
+			<div class="content">
+				<h1 id="字符串">字符串<a href="#字符串" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+<h2 id="输入">输入<a href="#输入" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//读到空格、回车为止
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">cin</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//读入空格，回车
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">fgets</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="n">stdin</span><span class="p">);</span> <span class="c1">//注意：会把回车读进来
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">cin</span><span class="p">.</span><span class="n">getline</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="mi">1000</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="输出">输出<a href="#输出" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">printf</span><span class="p">(</span><span class="s">&#34;%s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">s</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="n">puts</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</span></span></code></pre></div><h2 id="常用函数">常用函数<a href="#常用函数" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp"># inlude &lt;cstring&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span><span class="c1">//不包含‘\0&#39;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">strcmp</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span><span class="c1">//字典序比较，相等为0，a&lt;b返回-1，a&gt;b返回10
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">strcpy</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span><span class="c1">//把后面的复制给前面的
+</span></span></span></code></pre></div><h2 id="string类">String类<a href="#string类" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp">
+</span></span></span></code></pre></div><h3 id="初始化">初始化<a href="#初始化" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">string</span> <span class="n">s1</span><span class="p">;</span> <span class="c1">//默认的空字符串
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">string</span> <span class="n">s2</span> <span class="o">=</span> <span class="n">s1</span><span class="p">;</span> <span class="c1">//s2是s1的一个副本
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">string</span> <span class="n">s3</span> <span class="o">=</span> <span class="s">&#34;hiya&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">string</span> <span class="nf">s4</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="sc">&#39;c&#39;</span><span class="p">);</span> <span class="c1">//s4内容：cccccccccc
+</span></span></span></code></pre></div><h3 id="输入-1">输入<a href="#输入-1" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">s1</span><span class="p">;</span><span class="c1">//读入空格、回车、换行前的字符串
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span><span class="c1">//读入整行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cm">/*注意：string不能用scanf()读入*/</span>
+</span></span></code></pre></div><h3 id="输出-1">输出<a href="#输出-1" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">printf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="n">s1</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span> <span class="c1">//c_str():返回string数组首地址
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">puts</span><span class="p">(</span><span class="n">s1</span><span class="p">.</span><span class="n">c_str</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl"><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s1</span><span class="p">;</span>
+</span></span></code></pre></div><h3 id="常用函数-1">常用函数<a href="#常用函数-1" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">s1</span><span class="p">.</span><span class="n">empty</span><span class="p">();</span> <span class="c1">//当前string是否为空，返回0、1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">s1</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="c1">//当前字符的长度，O(1)速度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">s1</span> <span class="o">&gt;</span> <span class="n">s2</span><span class="p">;</span> <span class="c1">//&gt; &lt; &gt;=  &lt;= == !=
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">s1</span> <span class="o">+</span> <span class="n">s2</span><span class="p">;</span> <span class="c1">//&#34;abc&#34;拼接&#34;def&#34;得&#34;abcdef&#34;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">s1</span> <span class="o">+=</span> <span class="n">s3</span><span class="p">;</span>  <span class="c1">//支持累加
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">s1</span> <span class="o">+=</span> <span class="s">&#34;yes&#34;</span><span class="p">;</span> <span class="n">s1</span> <span class="o">+</span> <span class="sc">&#39;!&#39;</span><span class="p">;</span><span class="c1">//&#39;+&#39;运算符两侧至少有一个string变量
+</span></span></span></code></pre></div><h3 id="遍历">遍历<a href="#遍历" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="n">string</span> <span class="n">s1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">s1</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="n">i</span><span class="o">++</span><span class="p">){}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">c</span> <span class="p">:</span> <span class="n">s1</span><span class="p">){}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;</span><span class="nl">c</span> <span class="p">:</span> <span class="n">s1</span><span class="p">){}</span><span class="c1">//遍历得同时改变原string
+</span></span></span></code></pre></div><h2 id="trick">Trick<a href="#trick" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp"># 遍历字符串
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">101</span><span class="p">];</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">len</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">str</span><span class="p">);</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){}</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">];</span> <span class="n">i</span><span class="o">++</span><span class="p">){}</span>
+</span></span></code></pre></div><p>添加一行信息 再来一次 again</p>
+
+			</div>
+			<hr class="post-end">
+			<footer class="post-info">
+				<p>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="http://101.42.248.138/tags/c&#43;&#43;">C&#43;&#43;</a></span>
+				</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>133 Words</p>
+				<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2022-05-03 10:36 &#43;0800</p>
+			</footer>
+		</article>
+		<div class="post-nav thin">
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+	<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+		<p>&copy; 2022 <a href="http://101.42.248.138">Junkaih</a> &#183; <a href="http://beian.miit.gov.cn/">苏ICP备2021012652号</a></p>
+		<p>
+			Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> &#183; Theme <a href="https://github.com/Track3/hermit" target="_blank" rel="noopener">Hermit</a> &#183; <a href="http://101.42.248.138/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		</p>
+	</footer>
+
+
+
+	<script src="http://101.42.248.138/js/bundle.min.5a42c67b729ee2fa1059251688235399704707e04edb4e28c42c6f6dfa49d1d9.js" integrity="sha256-WkLGe3Ke4voQWSUWiCNTmXBHB+BO204oxCxvbfpJ0dk=" crossorigin="anonymous"></script>
+	
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-166045776-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+</body>
+
+</html>
