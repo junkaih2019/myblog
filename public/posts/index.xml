@@ -6,8 +6,22 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>zh-hans</language>
 		<copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-		<lastBuildDate>Tue, 03 May 2022 10:36:01 +0800</lastBuildDate>
+		<lastBuildDate>Tue, 03 May 2022 23:35:12 +0800</lastBuildDate>
 		<atom:link href="http://101.42.248.138/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Test Post</title>
+			<link>http://101.42.248.138/posts/test-post/</link>
+			<pubDate>Tue, 03 May 2022 23:35:12 +0800</pubDate>
+			
+			<guid>http://101.42.248.138/posts/test-post/</guid>
+			<description>Test-Post something
+import you </description>
+			<content type="html"><![CDATA[<h1 id="test-post">Test-Post</h1>
+<p>something</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">you</span>
+</span></span></code></pre></div>]]></content>
+		</item>
 		
 		<item>
 			<title>C&#43;&#43;字符串基础操作</title>
