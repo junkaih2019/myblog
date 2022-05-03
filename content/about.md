@@ -2,7 +2,7 @@
 title = "Huang Junkai"
 +++
 
-Hi, I'm a junior student majoring in softeware engineering.
+Hi! Welcome to my blog. I'm a junior student majoring in softeware engineering.
 
 Something I love:
 
