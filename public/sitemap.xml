@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://www.junkaih.com/</loc>
+    <loc>https://www.junkaih.com/</loc>
     <lastmod>2022-05-03T23:35:12+08:00</lastmod>
   </url><url>
-    <loc>http://www.junkaih.com/posts/</loc>
+    <loc>https://www.junkaih.com/posts/</loc>
     <lastmod>2022-05-03T23:35:12+08:00</lastmod>
   </url><url>
-    <loc>http://www.junkaih.com/tags/</loc>
+    <loc>https://www.junkaih.com/tags/</loc>
     <lastmod>2022-05-03T23:35:12+08:00</lastmod>
   </url><url>
-    <loc>http://www.junkaih.com/posts/test-post/</loc>
+    <loc>https://www.junkaih.com/posts/test-post/</loc>
     <lastmod>2022-05-03T23:35:12+08:00</lastmod>
   </url><url>
-    <loc>http://www.junkaih.com/tags/untagged/</loc>
+    <loc>https://www.junkaih.com/tags/untagged/</loc>
     <lastmod>2022-05-03T23:35:12+08:00</lastmod>
   </url><url>
-    <loc>http://www.junkaih.com/tags/c&#43;&#43;/</loc>
+    <loc>https://www.junkaih.com/tags/c&#43;&#43;/</loc>
     <lastmod>2022-05-03T10:36:01+08:00</lastmod>
   </url><url>
-    <loc>http://www.junkaih.com/posts/string/</loc>
+    <loc>https://www.junkaih.com/posts/string/</loc>
     <lastmod>2022-05-03T10:36:01+08:00</lastmod>
   </url><url>
-    <loc>http://www.junkaih.com/about/</loc>
+    <loc>https://www.junkaih.com/about/</loc>
   </url>
 </urlset>

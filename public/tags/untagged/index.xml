@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>untagged on Junkaih&#39;s Blog</title>
-    <link>http://www.junkaih.com/tags/untagged/</link>
+    <link>https://www.junkaih.com/tags/untagged/</link>
     <description>Recent content in untagged on Junkaih&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 03 May 2022 23:35:12 +0800</lastBuildDate><atom:link href="http://www.junkaih.com/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 May 2022 23:35:12 +0800</lastBuildDate><atom:link href="https://www.junkaih.com/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test Post</title>
-      <link>http://www.junkaih.com/posts/test-post/</link>
+      <link>https://www.junkaih.com/posts/test-post/</link>
       <pubDate>Tue, 03 May 2022 23:35:12 +0800</pubDate>
       
-      <guid>http://www.junkaih.com/posts/test-post/</guid>
+      <guid>https://www.junkaih.com/posts/test-post/</guid>
       <description>Test-Post something
 import you </description>
     </item>

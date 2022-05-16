@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>C&#43;&#43; on Junkaih&#39;s Blog</title>
-    <link>http://www.junkaih.com/tags/c&#43;&#43;/</link>
+    <link>https://www.junkaih.com/tags/c&#43;&#43;/</link>
     <description>Recent content in C&#43;&#43; on Junkaih&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Tue, 03 May 2022 10:36:01 +0800</lastBuildDate><atom:link href="http://www.junkaih.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 03 May 2022 10:36:01 +0800</lastBuildDate><atom:link href="https://www.junkaih.com/tags/c++/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C&#43;&#43;字符串基础操作</title>
-      <link>http://www.junkaih.com/posts/string/</link>
+      <link>https://www.junkaih.com/posts/string/</link>
       <pubDate>Tue, 03 May 2022 10:36:01 +0800</pubDate>
       
-      <guid>http://www.junkaih.com/posts/string/</guid>
+      <guid>https://www.junkaih.com/posts/string/</guid>
       <description>字符串 输入 char s[100]; //读到空格、回车为止 cin &amp;lt;&amp;lt; s; scanf(&amp;#34;%s&amp;#34;, s); //读入空格，回车 fgets(s,10000,stdin); //注意：会把回车读进来 cin.getline(s,1000) 输出 printf(&amp;#34;%s\n&amp;#34;,s); puts(s); 常用函数 # inlude &amp;lt;cstring&amp;gt; strlen(s);//不包含‘\0&amp;#39; strcmp(a,b);//字典序比较，相等为0，a&amp;lt;b返回-1，a&amp;gt;b返回10 strcpy(a,b);//把后面的复制给前面的 String类 #include &amp;lt;string&amp;gt;初始化 string s1; //默认的空字符串 string s2 = s1; //s2是s1的一个副本 string s3 = &amp;#34;hiya&amp;#34;; string s4(10, &amp;#39;c&amp;#39;); //s4内容：cccccccccc 输入 cin &amp;gt;&amp;gt; s1;//读入空格、回车、换行前的字符串 getline(cin, str);//读入整行 /*注意：string不能用scanf()读入*/ 输出 printf(&amp;#34;%s&amp;#34;, s1.c_str()); //c_str():返回string数组首地址 puts(s1.c_str()); cout &amp;lt;&amp;lt; s1; 常用函数 s1.empty(); //当前string是否为空，返回0、1 s1.size(); //当前字符的长度，O(1)速度 s1.insert(idx,&amp;#34;abcd&amp;#34;)//在源字符串第idx个位置起插入字符串 s1 &amp;gt; s2; //&amp;gt; &amp;lt; &amp;gt;= &amp;lt;= == !</description>
     </item>
     
