@@ -74,6 +74,7 @@ cout << s1;
 ```cpp
 s1.empty(); //当前string是否为空，返回0、1
 s1.size(); //当前字符的长度，O(1)速度
+s1.insert(idx,"abcd")//在源字符串第idx个位置起插入字符串
 s1 > s2; //> < >=  <= == !=
 s1 + s2; //"abc"拼接"def"得"abcdef"
 s1 += s3;  //支持累加

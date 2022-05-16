@@ -2,28 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://101.42.248.138/</loc>
+    <loc>http://www.junkaih.com/</loc>
     <lastmod>2022-05-03T23:35:12+08:00</lastmod>
   </url><url>
-    <loc>http://101.42.248.138/posts/</loc>
+    <loc>http://www.junkaih.com/posts/</loc>
     <lastmod>2022-05-03T23:35:12+08:00</lastmod>
   </url><url>
-    <loc>http://101.42.248.138/tags/</loc>
+    <loc>http://www.junkaih.com/tags/</loc>
     <lastmod>2022-05-03T23:35:12+08:00</lastmod>
   </url><url>
-    <loc>http://101.42.248.138/posts/test-post/</loc>
+    <loc>http://www.junkaih.com/posts/test-post/</loc>
     <lastmod>2022-05-03T23:35:12+08:00</lastmod>
   </url><url>
-    <loc>http://101.42.248.138/tags/untagged/</loc>
+    <loc>http://www.junkaih.com/tags/untagged/</loc>
     <lastmod>2022-05-03T23:35:12+08:00</lastmod>
   </url><url>
-    <loc>http://101.42.248.138/tags/c&#43;&#43;/</loc>
+    <loc>http://www.junkaih.com/tags/c&#43;&#43;/</loc>
     <lastmod>2022-05-03T10:36:01+08:00</lastmod>
   </url><url>
-    <loc>http://101.42.248.138/posts/string/</loc>
+    <loc>http://www.junkaih.com/posts/string/</loc>
     <lastmod>2022-05-03T10:36:01+08:00</lastmod>
   </url><url>
-    <loc>http://101.42.248.138/about-hugo/</loc>
-    <lastmod>2014-04-09T00:00:00+00:00</lastmod>
+    <loc>http://www.junkaih.com/about/</loc>
   </url>
 </urlset>
