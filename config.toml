@@ -41,7 +41,7 @@ googleAnalytics = "UA-166045776-1"
   # images = [""]
 
   # homeSubtitle = "Coding, Thinking, Life"
-  footerCopyright = ' &#183; <a href="http://beian.miit.gov.cn/">辽ICP备2022004704号-1</a>'
+  footerCopyright = ' &#183; <img src="beian.png" style="vertical-align:middle"/> <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=21021102001130" >辽公网安备 21021102001130号·</a> <a target="_blank" href="http://beian.miit.gov.cn/">辽ICP备2022004704号-1  </a>'
   # bgImg = ""  # Homepage background-image URL
 
   # Prefix of link to the git commit detail page. GitInfo must be enabled.
